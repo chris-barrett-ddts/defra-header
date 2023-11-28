@@ -1,0 +1,237 @@
+//
+// For guidance on how to add CSS and SCSS see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+// 
+
+// Add extra styles here
+@import "defra-settings";
+
+//defra header
+.defra-internal-header {
+    padding: 20px 0;
+    border-bottom: 8px solid $defra-brand-colour;
+
+  }
+
+  @media (min-width: 48.0625em) {
+    .defra-internal-header {
+      display: table;
+      width: 100%;
+      min-height: 35px;
+    }
+  }
+  
+  .defra-internal-header .defra-logo {
+    min-width: 275px;
+    margin-bottom: 15px;
+  }
+  
+  @media (min-width: 48.0625em) {
+    .defra-internal-header .defra-logo {
+      display: table-cell;
+      width: 33.33%;
+      margin-bottom: 0;
+    }
+  }
+  
+  @media (min-width: 48.0625em) {
+    .defra-internal-service-name {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 2em;
+    }
+  }
+  
+  .defra-internal-service-name__link {
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 400;
+  }
+  
+  .defra-internal-service-name__link:link, 
+  .defra-internal-service-name__link:visited {
+    color: $govuk-text-colour
+  }
+  
+  @media (min-width: 48.0625em) {
+    .defra-internal-service-name__link {
+      font-size: 24px;
+    }
+  }
+  
+  .defra-logo {
+    border-left: 2px solid $defra-brand-colour;
+    padding-left: 8px;
+  }
+
+  .defra-logo__link {
+    display: table;
+  }
+  
+  .defra-logo__link::before {
+    content: '';
+    display: table-cell;
+    background: url("/public/images/Department_for_Environment,_Food_and_Rural_Affairs_logo.png") no-repeat;
+    background-size: 100% 100%;
+    width: 138px;
+    height: 75px;
+  }
+  
+  .defra-logo__link:link, 
+  .defra-logo__link:visited {
+    text-decoration: none;
+    font-size: 20px;
+    color: $govuk-text-colour;
+  }
+  
+  .defra-logo__img {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+  
+
+
+  /*
+  Layout - Footer
+  ----------------------------------- */
+
+  .footer-container {
+    border-top: 1px $border-grey solid;
+    background-color: $base-grey-light;
+    // box-shadow: 0 50vh 0 50vh $base-grey-light;
+  
+    .wrapper-footer {
+      padding: 30px 20px;
+      display: flex;
+      max-width: 960px;
+      margin: 0 auto;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+  
+      .defra-footer-text {
+        margin-bottom: 0;
+      }
+  
+      .footer-menu {
+        align-items: flex-end;
+        display: flex;
+      }
+  
+      .footer-menu ul {
+        display: flex;
+        margin: 0;
+  
+        li {
+          padding-left: 1.5em;
+          list-style: none;
+        }
+  
+        li a {
+          color: #3B3B3B;
+        }
+  
+        li:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+  
+  }
+  
+  
+  @media (max-width: 800px) {
+  
+    footer .wrapper-footer {
+      padding: 20px 15px;
+      display: inherit!important;
+      font-size: 0.8em;
+  
+      .footer-message {
+        margin-top: 10px;
+      }
+    }
+  
+    .footer-menu {
+      margin-top: 20px;
+    }
+  
+    .footer-menu ul {
+      padding-left: 0;
+    }
+  
+  }
+  
+  
+  .wrapper-footer__system {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1050px;
+  
+    .footer-message {
+  
+      p {
+        margin-bottom: 0;
+        font-size: 16px;
+      }
+    }
+  
+    .footer-menu {
+      align-items: flex-end;
+      display: flex;
+    }
+  
+    .footer-menu ul {
+      display: flex;
+      font-size: 14px;
+  
+      li {
+        padding-left: 1.5em;
+        list-style: none;
+      }
+  
+      li a {
+        color: #3B3B3B;
+        font-size: 16px;
+      }
+  
+      li:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    .wrapper-footer__system {
+      display: inherit;
+  
+      .footer-menu {
+        margin-top: 10px;
+      }
+    }
+  
+  
+  }
+  
+  @media (max-width: 690px) {
+  
+    .wrapper-footer__system {
+      font-size: 13px;
+  
+      .footer-menu {
+        margin-top: 8px;
+      }
+  
+      .footer-menu ul {
+        padding-left: 0;
+      }
+  
+    }
+  
+  }
+  
